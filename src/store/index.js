@@ -1,4 +1,4 @@
-import redux from 'redux';
+import { legacy_createStore } from 'redux';
 
 const counterReducer = (state = { counter: 0 }, action) => {
   if (action.type === "increment") {
@@ -15,6 +15,6 @@ const counterReducer = (state = { counter: 0 }, action) => {
   return state;
 };
 
-const store = redux.legacy_createStore(counterReducer);
+const store = legacy_createStore(counterReducer);
 
 export default store;
